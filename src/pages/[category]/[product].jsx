@@ -1,16 +1,18 @@
-import React from 'react'
+import React from 'react';
 import {useRouter} from 'next/router'
+import { Heading } from '../../styles/Heading';
+import Container from '../../styles/Container';
 
 function Product() {
     const {query : { category, product }} = useRouter();
     return (
         <>
-            <div>
-                <h1>Categoria: {category}</h1>
-            </div>
-            <div>
-                <h1>Produto: {product}</h1>
-            </div>
+            <Container>
+                <Heading>Categoria: {category}</Heading>
+            </Container>
+            <Container>
+                <Heading>Produto: {product}</Heading>
+            </Container>
         </>
     )
 }
